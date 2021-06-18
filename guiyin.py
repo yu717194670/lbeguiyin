@@ -27,7 +27,9 @@ def packagename():
             # SD清理专家
             "sdclean" : "com.sdandroid.server.ctscard",
             # 雷神
-            "leishen" : "com.cleandroid.server.ctsthor"
+            "leishen" : "com.cleandroid.server.ctsthor",
+            # wifi随意连
+            "suiyilian" : "com.connectandroid.server.ctseasy"
         }
 
         return dict
@@ -68,9 +70,9 @@ if __name__ == '__main__':
         print("正式服地址")
     
 
-    device_id="5e5f5e26fb3e9d44"
+    device_id="da0f3e8cadb247be"
 
-    pkg_name=packagename()["5Gjingling"]
+    pkg_name=packagename()["suiyilian"]
     print(pkg_name)
 
     '''修改归因信息'''
@@ -80,7 +82,7 @@ if __name__ == '__main__':
         device_id=device_id,
         media_source="bytedance_int",
         ad_site_ad="10001",
-        campaign_id="test_csj"
+        campaign_id="test_ks"
         )
 
     '''移除黑名单'''
