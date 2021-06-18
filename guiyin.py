@@ -25,7 +25,9 @@ def packagename():
             # 5G快连
             "5Gkuailian" : "com.linkandroid.server.ctsmate",
             # SD清理专家
-            "sdclean" : "com.sdandroid.server.ctscard"
+            "sdclean" : "com.sdandroid.server.ctscard",
+            # 雷神
+            "leishen" : "com.cleandroid.server.ctsthor"
         }
 
         return dict
@@ -66,9 +68,9 @@ if __name__ == '__main__':
         print("正式服地址")
     
 
-    device_id="1684d16e5bf846fa"
+    device_id="5e5f5e26fb3e9d44"
 
-    pkg_name=packagename()["jianbian"]
+    pkg_name=packagename()["5Gjingling"]
     print(pkg_name)
 
     '''修改归因信息'''
@@ -76,9 +78,9 @@ if __name__ == '__main__':
         base_url=base_url,
         pkg_name=pkg_name,
         device_id=device_id,
-        media_source="organic",
+        media_source="bytedance_int",
         ad_site_ad="10001",
-        campaign_id="00"
+        campaign_id="test_csj"
         )
 
     '''移除黑名单'''
