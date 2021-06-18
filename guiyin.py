@@ -57,17 +57,18 @@ def guiyin(base_url="https://tycs.suapp.mobi",
     print(reponse.text)
 
 if __name__ == '__main__':
-    base_url="https://tycs.suapp.mobi"
-    # base_url="http://161.189.70.26:9001"
-
-    if base_url=="https://tycs.suapp.mobi":
+    text = input("输入生效地址(c 或者 z):")
+    if text == "c":
+        base_url="https://tycs.suapp.mobi"
         print("测试服地址")
-    elif base_url=="http://161.189.70.26:9001":
+    elif text=="z":
+        base_url="http://161.189.70.26:9001"
         print("正式服地址")
+    
 
-    device_id="51341c952d1b63e0"
+    device_id="1684d16e5bf846fa"
 
-    pkg_name=packagename()["sdclean"]
+    pkg_name=packagename()["jianbian"]
     print(pkg_name)
 
     '''修改归因信息'''
@@ -75,9 +76,9 @@ if __name__ == '__main__':
         base_url=base_url,
         pkg_name=pkg_name,
         device_id=device_id,
-        media_source="bytedance_int",
+        media_source="organic",
         ad_site_ad="10001",
-        campaign_id="test_gdt"
+        campaign_id="00"
         )
 
     '''移除黑名单'''
@@ -100,5 +101,11 @@ http://161.189.70.26:9001
 
 四 测试用户来源修改，归因为bytedance_int，将campain_id 改成 test_csj,test_dp,test_gdt,test_ks,test_ks_content,test_baidu，分别可以获取对应的策略
 '''
+
+
+
+
+
+
 
 
