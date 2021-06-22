@@ -28,7 +28,7 @@ def packagename():
             "sdclean" : "com.sdandroid.server.ctscard",
             # 雷神
             "leishen" : "com.cleandroid.server.ctsthor",
-            # wifi随意连
+            # 随意连
             "suiyilian" : "com.connectandroid.server.ctseasy"
         }
 
@@ -62,35 +62,115 @@ def guiyin(base_url="https://tycs.suapp.mobi",
 
 if __name__ == '__main__':
     text = input("输入生效地址(c 或者 z):")
+    text1 = input("输入android id:")
+    device_id=text1
+    text2 = input("输入包名:")
+    pkg_name=packagename()[text2]
+    print(pkg_name)
     if text == "c":
         base_url="https://tycs.suapp.mobi"
         print("测试服地址")
     elif text=="z":
         base_url="http://161.189.70.26:9001"
         print("正式服地址")
-    
+    caozuo=input("1.删除归因信息 2.修改归因信息 3.查询归因信息\n")
+    if caozuo=="1":
+        guiyin(base_url=base_url,method="del",device_id=device_id,pkg_name=pkg_name)
+        guiyin(base_url=base_url,method="query",device_id=device_id,pkg_name=pkg_name)
+    elif caozuo=="2":
+        while True:
+            text4=input("巨量站内,巨量穿山甲,通投广告位,优量汇-微信,优量汇,test_csj,test_gdt,test_ks\n")
+            if text4=="巨量站内":
+                guiyin(
+                    base_url=base_url,
+                    pkg_name=pkg_name,
+                    device_id=device_id,
+                    media_source="bytedance_int",
+                    ad_site_ad="10001",
+                    campaign_id=""
+                    )
+                break
+            elif text4=="巨量穿山甲":
+                guiyin(
+                base_url=base_url,
+                pkg_name=pkg_name,
+                device_id=device_id,
+                media_source="bytedance_int",
+                ad_site_ad="800000000",
+                campaign_id=""
+                )
+                break
+            elif text4=="通投广告位":
+                guiyin(
+                base_url=base_url,
+                pkg_name=pkg_name,
+                device_id=device_id,
+                media_source="bytedance_int",
+                ad_site_ad="33013",
+                campaign_id=""
+                )
+                break
+            elif text4=="优量汇-微信":
+                guiyin(
+                base_url=base_url,
+                pkg_name=pkg_name,
+                device_id=device_id,
+                media_source="ylh",
+                ad_site_ad="21",
+                campaign_id=""
+                )
+                break
+            elif text4=="优量汇":
+                guiyin(
+                base_url=base_url,
+                pkg_name=pkg_name,
+                device_id=device_id,
+                media_source="ylh",
+                ad_site_ad="15",
+                campaign_id=""
+                )
+                break
+            elif text4=="test_csj":
+                guiyin(
+                base_url=base_url,
+                pkg_name=pkg_name,
+                device_id=device_id,
+                media_source="bytedance_int",
+                ad_site_ad="",
+                campaign_id="test_csj"
+                )
+                break
+            elif text4=="test_gdt":
+                guiyin(
+                base_url=base_url,
+                pkg_name=pkg_name,
+                device_id=device_id,
+                media_source="bytedance_int",
+                ad_site_ad="",
+                campaign_id="test_gdt"
+                )
+                break
+            elif text4=="test_ks":
+                guiyin(
+                base_url=base_url,
+                pkg_name=pkg_name,
+                device_id=device_id,
+                media_source="bytedance_int",
+                ad_site_ad="",
+                campaign_id="test_ks"
+                )
+                break
+            else:
+                print("输入错误"),
+                continue
 
-    device_id="da0f3e8cadb247be"
+        '''移除黑名单'''
+        guiyin(base_url=base_url,method="del-black-list",device_id=device_id,pkg_name=pkg_name)
 
-    pkg_name=packagename()["suiyilian"]
-    print(pkg_name)
-
-    '''修改归因信息'''
-    guiyin(
-        base_url=base_url,
-        pkg_name=pkg_name,
-        device_id=device_id,
-        media_source="bytedance_int",
-        ad_site_ad="10001",
-        campaign_id="test_ks"
-        )
-
-    '''移除黑名单'''
-    guiyin(base_url=base_url,method="del-black-list",device_id=device_id,pkg_name=pkg_name)
-
-    '''查看归因信息'''
-    guiyin(base_url=base_url,method="query",device_id=device_id)
-
+        '''查看归因信息'''
+        guiyin(base_url=base_url,method="query",device_id=device_id,pkg_name=pkg_name)
+    else:
+        guiyin(base_url=base_url,method="query",device_id=device_id,pkg_name=pkg_name)
 '''
 https://tycs.suapp.mobi
 http://161.189.70.26:9001
