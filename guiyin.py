@@ -70,7 +70,7 @@ if __name__ == '__main__':
         print("正式服地址")
     
 
-    device_id="da0f3e8cadb247be"
+    device_id="82daa9c20e071547"
 
     pkg_name=packagename()["suiyilian"]
     print(pkg_name)
@@ -82,7 +82,7 @@ if __name__ == '__main__':
         device_id=device_id,
         media_source="bytedance_int",
         ad_site_ad="10001",
-        campaign_id="test_ks"
+        campaign_id="00"
         )
 
     '''移除黑名单'''
