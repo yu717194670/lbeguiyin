@@ -29,7 +29,9 @@ def packagename():
             # 雷神
             "leishen" : "com.cleandroid.server.ctsthor",
             # wifi随意连
-            "suiyilian" : "com.connectandroid.server.ctseasy"
+            "suiyilian" : "com.connectandroid.server.ctseasy",
+            # wifi随心连
+            "suixinlian" : "com.heartandroid.server.ctslink"
         }
 
         return dict
