@@ -72,7 +72,7 @@ if __name__ == '__main__':
         print("正式服地址")
     
 
-    device_id="8b340ff8bf39f6e1"
+    device_id="0864178282cbb157"
 
     pkg_name=packagename()["leishen"]
     print(pkg_name)

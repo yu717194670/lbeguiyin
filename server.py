@@ -169,7 +169,7 @@ if __name__ == '__main__':
     print(pkg_name)
 
     news_and_weather(urls=url()["5Gjingling_news_and_weather"],pkg_name=pkg_name,value_field="3")
-    lockscreen(urls=url()["5Gjingling_lockscreen"],pkg_name=pkg_name,value_field="ture")
+    lockscreen(urls=url()["5Gjingling_lockscreen"],pkg_name=pkg_name,value_field="true")
     no_lockscreen(urls=url()["5Gjingling_no_lockscreen"],pkg_name=pkg_name,value_field="false")
 
 
