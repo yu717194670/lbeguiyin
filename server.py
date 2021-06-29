@@ -165,12 +165,12 @@ def no_lockscreen(urls=url()["liuxing_no_lockscreen"],
     client.post(urls,data=body)
 
 if __name__ == '__main__':
-    pkg_name = packagename()["suixinlian"]
+    pkg_name = packagename()["5Gjingling"]
     print(pkg_name)
 
-    news_and_weather(urls=url()["suixinlian_news_and_weather"],pkg_name=pkg_name,value_field="3")
-    lockscreen(urls=url()["suixinlian_lockscreen"],pkg_name=pkg_name,value_field="ture")
-    no_lockscreen(urls=url()["suixinlian_no_lockscreen"],pkg_name=pkg_name,value_field="false")
+    news_and_weather(urls=url()["5Gjingling_news_and_weather"],pkg_name=pkg_name,value_field="3")
+    lockscreen(urls=url()["5Gjingling_lockscreen"],pkg_name=pkg_name,value_field="ture")
+    no_lockscreen(urls=url()["5Gjingling_no_lockscreen"],pkg_name=pkg_name,value_field="false")
 
 
 
