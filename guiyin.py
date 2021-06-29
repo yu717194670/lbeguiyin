@@ -73,6 +73,7 @@ if __name__ == '__main__':
     elif text=="z":
         base_url="http://161.189.70.26:9001"
         print("正式服地址")
+<<<<<<< HEAD
     caozuo=input("1.删除归因信息 2.修改归因信息 3.查询归因信息\n")
     if caozuo=="1":
         guiyin(base_url=base_url,method="del",device_id=device_id,pkg_name=pkg_name)
@@ -171,6 +172,31 @@ if __name__ == '__main__':
         guiyin(base_url=base_url,method="query",device_id=device_id,pkg_name=pkg_name)
     else:
         guiyin(base_url=base_url,method="query",device_id=device_id,pkg_name=pkg_name)
+=======
+    
+
+    device_id="0864178282cbb157"
+
+    pkg_name=packagename()["leishen"]
+    print(pkg_name)
+
+    '''修改归因信息'''
+    guiyin(
+        base_url=base_url,
+        pkg_name=pkg_name,
+        device_id=device_id,
+        media_source="bytedance_int",
+        ad_site_ad="10001",
+        campaign_id="test_csj"
+        )
+
+    '''移除黑名单'''
+    guiyin(base_url=base_url,method="del-black-list",device_id=device_id,pkg_name=pkg_name)
+
+    '''查看归因信息'''
+    guiyin(base_url=base_url,method="query",device_id=device_id,pkg_name=pkg_name)
+
+>>>>>>> 6212cfd... 修改参数错误
 '''
 https://tycs.suapp.mobi
 http://161.189.70.26:9001
