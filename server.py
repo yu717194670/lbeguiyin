@@ -68,7 +68,7 @@ def url():
         # wifi随心连url
         "suixinlian_news_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1397/change/?_changelist_filters=pkg_name%3Dcom.heartandroid.server.ctslink",
         "suixinlian_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1393/change/?_changelist_filters=pkg_name%3Dcom.heartandroid.server.ctslink",
-        "suixinlian_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1392/change/?_changelist_filters=pkg_name%3Dcom.heartandroid.server.ctslink"
+        "suixinlian_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1392/change/?_changelist_filters=pkg_name%3Dcom.heartandroid.server.ctslink",
         # 5Gjinglingurl
         "5Gjingling_news_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1332/change/?_changelist_filters=pkg_name%3Dcom.netandroid.server.ctselves",
         "5Gjingling_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1254/change/?_changelist_filters=pkg_name%3Dcom.netandroid.server.ctselves",
