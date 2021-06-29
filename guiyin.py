@@ -72,9 +72,9 @@ if __name__ == '__main__':
         print("正式服地址")
     
 
-    device_id="devices"
+    device_id="8b340ff8bf39f6e1"
 
-    pkg_name=packagename()["5Gjingling"]
+    pkg_name=packagename()["leishen"]
     print(pkg_name)
 
     '''修改归因信息'''
@@ -84,7 +84,7 @@ if __name__ == '__main__':
         device_id=device_id,
         media_source="bytedance_int",
         ad_site_ad="10001",
-        campaign_id="00"
+        campaign_id="test_csj"
         )
 
     '''移除黑名单'''
