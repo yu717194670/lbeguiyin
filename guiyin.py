@@ -175,9 +175,9 @@ if __name__ == '__main__':
 =======
     
 
-    device_id="0864178282cbb157"
+    device_id="2d0bb00bbe67383e"
 
-    pkg_name=packagename()["leishen"]
+    pkg_name=packagename()["suixinlian"]
     print(pkg_name)
 
     '''修改归因信息'''
@@ -187,7 +187,7 @@ if __name__ == '__main__':
         device_id=device_id,
         media_source="bytedance_int",
         ad_site_ad="10001",
-        campaign_id="test_csj"
+        campaign_id="test_gdt"
         )
 
     '''移除黑名单'''
