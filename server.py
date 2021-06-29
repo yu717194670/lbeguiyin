@@ -23,14 +23,6 @@ def login():
     }
     client.post(url,data=data)
 
-def url():
-    url_dict = {
-        "liuxing_news_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1348/change/?_changelist_filters=pkg_name%3Dcom.meteorandroid.server.ctsclean",
-        "liuxing_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1221/change/?_changelist_filters=pkg_name%3Dcom.meteorandroid.server.ctsclean",
-        "liuxing_lockscreen": "http://52.81.69.12:9000/admin/advertisement/adspolicy/1238/change/?_changelist_filters=pkg_name%3Dcom.meteorandroid.server.ctsclean"
-    }
-    return url_dict
-
 def packagename():
     dict = {
         # 金刚
@@ -66,6 +58,17 @@ def packagename():
     }
 
     return dict
+
+def url():
+    url_dict = {
+        "liuxing_news_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1348/change/?_changelist_filters=pkg_name%3Dcom.meteorandroid.server.ctsclean",
+        "liuxing_lockscreen": "http://52.81.69.12:9000/admin/advertisement/adspolicy/1238/change/?_changelist_filters=pkg_name%3Dcom.meteorandroid.server.ctsclean",
+        "liuxing_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1221/change/?_changelist_filters=pkg_name%3Dcom.meteorandroid.server.ctsclean",
+        "suixinlian_news_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1397/change/?_changelist_filters=pkg_name%3Dcom.heartandroid.server.ctslink",
+        "suixinlian_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1393/change/?_changelist_filters=pkg_name%3Dcom.heartandroid.server.ctslink",
+        "suixinlian_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1392/change/?_changelist_filters=pkg_name%3Dcom.heartandroid.server.ctslink"
+    }
+    return url_dict
 
 def news_and_weather(urls=url()["liuxing_news_and_weather"],
                      pkg_name="com.meteorandroid.server.ctsclean",
@@ -156,10 +159,10 @@ def no_lockscreen(urls=url()["liuxing_no_lockscreen"],
     client.post(urls,data=body)
 
 if __name__ == '__main__':
-    pkg_name = packagename()["liuxing"]
+    pkg_name = packagename()["suixinlian"]
     print(pkg_name)
 
-    news_and_weather(urls=url()["liuxing_news_and_weather"],pkg_name=pkg_name,value_field="3")
-    lockscreen(urls=url()["liuxing_lockscreen"],pkg_name=pkg_name,value_field="ture")
-    no_lockscreen(urls=url()["liuxing_no_lockscreen"],pkg_name=pkg_name,value_field="false")
+    news_and_weather(urls=url()["suixinlian_news_and_weather"],pkg_name=pkg_name,value_field="3")
+    lockscreen(urls=url()["suixinlian_lockscreen"],pkg_name=pkg_name,value_field="ture")
+    no_lockscreen(urls=url()["suixinlian_no_lockscreen"],pkg_name=pkg_name,value_field="false")
 
