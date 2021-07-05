@@ -23,6 +23,18 @@ def login():
     }
     client.post(url,data=data)
 
+def j_login():
+    url = "http://report.suapp.mobi:8082/j_spring_security_check"
+
+    data = {
+        "j_username": "liujinjian",
+        "j_password": "Aa111111" ,
+        "from": "/",
+        "Submit": "登录",
+        "remember_me": "on"
+    }
+    client.post(url,data=data)
+
 def packagename():
     dict = {
         # 金刚
@@ -72,7 +84,15 @@ def url():
         # 5Gjinglingurl
         "5Gjingling_news_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1332/change/?_changelist_filters=pkg_name%3Dcom.netandroid.server.ctselves",
         "5Gjingling_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1254/change/?_changelist_filters=pkg_name%3Dcom.netandroid.server.ctselves",
-        "5Gjingling_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1237/change/?_changelist_filters=pkg_name%3Dcom.netandroid.server.ctselves"
+        "5Gjingling_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1237/change/?_changelist_filters=pkg_name%3Dcom.netandroid.server.ctselves",
+        # 微清理url
+        "weiqingli_new_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1347/change/?_changelist_filters=pkg_name%3Dcom.cleanapps.master",
+        "weiqingli_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1239/change/?_changelist_filters=pkg_name%3Dcom.cleanapps.master",
+        "weiqingli_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1222/change/?_changelist_filters=pkg_name%3Dcom.cleanapps.master",
+        # 简变p图url
+        "jianbian_new_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1336/change/?_changelist_filters=pkg_name%3Dcom.mattingandroid.server.ctsimple",
+        "jianbian_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1250/change/?_changelist_filters=pkg_name%3Dcom.mattingandroid.server.ctsimple",
+        "jianbian_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1233/change/?_changelist_filters=pkg_name%3Dcom.mattingandroid.server.ctsimple"
     }
     return url_dict
 
@@ -165,13 +185,12 @@ def no_lockscreen(urls=url()["liuxing_no_lockscreen"],
     client.post(urls,data=body)
 
 if __name__ == '__main__':
-    pkg_name = packagename()["suixinlian"]
+    pkg_name = packagename()["jianbian"]
     print(pkg_name)
-    
-    news_and_weather(urls=url()["5Gjingling_news_and_weather"],pkg_name=pkg_name,value_field="3")
-    lockscreen(urls=url()["5Gjingling_lockscreen"],pkg_name=pkg_name,value_field="true")
-    no_lockscreen(urls=url()["5Gjingling_no_lockscreen"],pkg_name=pkg_name,value_field="false")
 
+    news_and_weather(urls=url()["jianbian_new_and_weather"],pkg_name=pkg_name,value_field="3")
+    lockscreen(urls=url()["jianbian_lockscreen"],pkg_name=pkg_name,value_field="true")
+    no_lockscreen(urls=url()["jianbian_no_lockscreen"],pkg_name=pkg_name,value_field="true")
 
 
 
