@@ -31,7 +31,11 @@ def packagename():
             # wifi随意连
             "suiyilian" : "com.connectandroid.server.ctseasy",
             # wifi随心连
-            "suixinlian" : "com.heartandroid.server.ctslink"
+            "suixinlian" : "com.heartandroid.server.ctslink",
+            # 天天快清理
+            "tiantian" : "com.cleandroid.server.ctspeed",
+            # 闪电快连
+            "shandian" : "com.lightningandroid.server.ctslink"
         }
 
         return dict
@@ -42,9 +46,9 @@ def guiyin(base_url="https://tycs.suapp.mobi",
         check_code="",
         channel="",
         device_id="6f79ef42dc439f5c",
-        media_source="bytedance_int",
+        media_source="organic",
         ad_site_ad="10001",
-        campaign_id="00"):
+        campaign_id="0"):
 
     url = base_url+"/cm/qa-tool/set-attribution"
 
@@ -71,20 +75,19 @@ if __name__ == '__main__':
         base_url="http://161.189.70.26:9001"
         print("正式服地址")
     
+    device_id="c6d5d61b639e9efd"
 
-    device_id="2d0bb00bbe67383e"
-
-    pkg_name=packagename()["suixinlian"]
+    pkg_name=packagename()["tiantian"]
     print(pkg_name)
 
     '''修改归因信息'''
     guiyin(
         base_url=base_url,
         pkg_name=pkg_name,
-        device_id=device_id,
+        device_id=device_id,    
         media_source="bytedance_int",
         ad_site_ad="10001",
-        campaign_id="test_gdt"
+        campaign_id="test_gjxw"
         )
 
     '''移除黑名单'''
@@ -106,6 +109,7 @@ http://161.189.70.26:9001
 三. 测试环境修改 campaign_id 为 campaign_id_roi_test 下发巨量ROI策略
 
 四 测试用户来源修改，归因为bytedance_int，将campain_id 改成 test_csj,test_dp,test_gdt,test_ks,test_ks_content,test_baidu，分别可以获取对应的策略
+SD卡关键行为已上线，测试时需要把归因改成bytedance_int, campaign_id改成 test_gjxw
 '''
 
 

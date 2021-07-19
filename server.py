@@ -66,7 +66,11 @@ def packagename():
         # wifi随意连
         "suiyilian": "com.connectandroid.server.ctseasy",
         # wifi随心连
-        "suixinlian": "com.heartandroid.server.ctslink"
+        "suixinlian": "com.heartandroid.server.ctslink",
+        # 天天快清理
+        "tiantian" : "com.cleandroid.server.ctspeed",
+        # 闪电快连
+        "shandian" : "com.lightningandroid.server.ctslink"
     }
 
     return dict
@@ -92,7 +96,15 @@ def url():
         # 简变p图url
         "jianbian_new_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1336/change/?_changelist_filters=pkg_name%3Dcom.mattingandroid.server.ctsimple",
         "jianbian_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1250/change/?_changelist_filters=pkg_name%3Dcom.mattingandroid.server.ctsimple",
-        "jianbian_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1233/change/?_changelist_filters=pkg_name%3Dcom.mattingandroid.server.ctsimple"
+        "jianbian_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1233/change/?_changelist_filters=pkg_name%3Dcom.mattingandroid.server.ctsimple",
+        # 秀我p图url
+        "xiuwo_new_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1498/change/?_changelist_filters=pkg_name%3Dcom.imageandroid.server.ctsmatting",
+        "xiuwo_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1499/change/?_changelist_filters=pkg_name%3Dcom.imageandroid.server.ctsmatting",
+        "xiuwo_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1500/change/?_changelist_filters=pkg_name%3Dcom.imageandroid.server.ctsmatting",
+        # 闪电5Gurl
+        "shandian_new_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1446/change/?_changelist_filters=pkg_name%3Dcom.lightningandroid.server.ctslink",
+        "shandian_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1442/change/?_changelist_filters=pkg_name%3Dcom.lightningandroid.server.ctslink",
+        "shandian_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1441/change/?_changelist_filters=pkg_name%3Dcom.lightningandroid.server.ctslink"
     }
     return url_dict
 
@@ -185,12 +197,12 @@ def no_lockscreen(urls=url()["liuxing_no_lockscreen"],
     client.post(urls,data=body)
 
 if __name__ == '__main__':
-    pkg_name = packagename()["jianbian"]
+    pkg_name = packagename()["shandian"]
     print(pkg_name)
 
-    news_and_weather(urls=url()["jianbian_new_and_weather"],pkg_name=pkg_name,value_field="3")
-    lockscreen(urls=url()["jianbian_lockscreen"],pkg_name=pkg_name,value_field="true")
-    no_lockscreen(urls=url()["jianbian_no_lockscreen"],pkg_name=pkg_name,value_field="true")
+    news_and_weather(urls=url()["shandian_new_and_weather"],pkg_name=pkg_name,value_field="3")
+    lockscreen(urls=url()["shandian_lockscreen"],pkg_name=pkg_name,value_field="true")
+    no_lockscreen(urls=url()["shandian_no_lockscreen"],pkg_name=pkg_name,value_field="true")
 
 
 
