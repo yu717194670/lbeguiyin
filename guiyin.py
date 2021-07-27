@@ -35,7 +35,9 @@ def packagename():
             # 天天快清理
             "tiantian" : "com.cleandroid.server.ctspeed",
             # 闪电快连
-            "shandian" : "com.lightningandroid.server.ctslink"
+            "shandian" : "com.lightningandroid.server.ctslink",
+            # 天气
+            "tianqi" : "com.weatherandroid.server.ctslink"
         }
 
         return dict
@@ -75,9 +77,9 @@ if __name__ == '__main__':
         base_url="http://161.189.70.26:9001"
         print("正式服地址")
     
-    device_id="c6d5d61b639e9efd"
-
-    pkg_name=packagename()["tiantian"]
+    device_id="375bccc7d31b38b2"
+     
+    pkg_name=packagename()["leishen"]
     print(pkg_name)
 
     '''修改归因信息'''
@@ -87,7 +89,7 @@ if __name__ == '__main__':
         device_id=device_id,    
         media_source="bytedance_int",
         ad_site_ad="10001",
-        campaign_id="test_gjxw"
+        campaign_id="00"
         )
 
     '''移除黑名单'''

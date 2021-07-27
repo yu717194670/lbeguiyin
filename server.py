@@ -200,8 +200,8 @@ if __name__ == '__main__':
     pkg_name = packagename()["shandian"]
     print(pkg_name)
 
-    news_and_weather(urls=url()["shandian_new_and_weather"],pkg_name=pkg_name,value_field="3")
-    lockscreen(urls=url()["shandian_lockscreen"],pkg_name=pkg_name,value_field="true")
+    news_and_weather(urls=url()["shandian_new_and_weather"],pkg_name=pkg_name,value_field="0")
+    lockscreen(urls=url()["shandian_lockscreen"],pkg_name=pkg_name,value_field="false")
     no_lockscreen(urls=url()["shandian_no_lockscreen"],pkg_name=pkg_name,value_field="true")
 
 
