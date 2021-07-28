@@ -37,7 +37,9 @@ def packagename():
             # 闪电快连
             "shandian" : "com.lightningandroid.server.ctslink",
             # 天气
-            "tianqi" : "com.weatherandroid.server.ctslink"
+            "tianqi" : "com.weatherandroid.server.ctslink",
+            # 连连快
+            "lianliankuai" : "com.fastandroid.server.ctsnet"
         }
 
         return dict
@@ -77,9 +79,9 @@ if __name__ == '__main__':
         base_url="http://161.189.70.26:9001"
         print("正式服地址")
     
-    device_id="375bccc7d31b38b2"
+    device_id="34f629486f9f4d05"
      
-    pkg_name=packagename()["leishen"]
+    pkg_name=packagename()["lianliankuai"]
     print(pkg_name)
 
     '''修改归因信息'''
