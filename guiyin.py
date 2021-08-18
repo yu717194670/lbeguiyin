@@ -39,7 +39,9 @@ def packagename():
             # 天气
             "tianqi" : "com.weatherandroid.server.ctslink",
             # 连连快
-            "lianliankuai" : "com.fastandroid.server.ctsnet"
+            "lianliankuai" : "com.fastandroid.server.ctsnet",
+            # 畅快连
+            "changkuailian" : "com.smoothandroid.server.ctslink"
         }
 
         return dict
@@ -79,9 +81,9 @@ if __name__ == '__main__':
         base_url="http://161.189.70.26:9001"
         print("正式服地址")
     
-    device_id="34f629486f9f4d05"
+    device_id="e12fccff92ec5a14"
      
-    pkg_name=packagename()["lianliankuai"]
+    pkg_name=packagename()["shandian"]
     print(pkg_name)
 
     '''修改归因信息'''
@@ -101,6 +103,7 @@ if __name__ == '__main__':
     guiyin(base_url=base_url,method="query",device_id=device_id,pkg_name=pkg_name)
 
 '''
+e12fccff92ec5a14
 https://tycs.suapp.mobi
 http://161.189.70.26:9001
 

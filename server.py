@@ -104,8 +104,7 @@ def url():
         # 闪电5Gurl
         "shandian_new_and_weather" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1446/change/?_changelist_filters=pkg_name%3Dcom.lightningandroid.server.ctslink",
         "shandian_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1442/change/?_changelist_filters=pkg_name%3Dcom.lightningandroid.server.ctslink",
-        "shandian_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1441/change/?_changelist_filters=pkg_name%3Dcom.lightningandroid.server.ctslink"
-    }
+        "shandian_no_lockscreen" : "http://52.81.69.12:9000/admin/advertisement/adspolicy/1441/change/?_changelist_filters=pkg_name%3Dcom.lightningandroid.server.ctslink"    }
     return url_dict
 
 def news_and_weather(urls=url()["liuxing_news_and_weather"],
@@ -197,7 +196,7 @@ def no_lockscreen(urls=url()["liuxing_no_lockscreen"],
     client.post(urls,data=body)
 
 if __name__ == '__main__':
-    pkg_name = packagename()["suixinlian"]
+    pkg_name = packagename()["suiyilian"]
     print(pkg_name)
 
     news_and_weather(urls=url()["suixinlian_news_and_weather"],pkg_name=pkg_name,value_field="3")
