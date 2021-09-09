@@ -6,4 +6,7 @@ def shijianchuo(ms):
 	otherStyleTime = time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
 	print(otherStyleTime)
 
-shijianchuo(1629192040882)
+shijianchuo(1631167205824)
+# import subprocess
+# order='adb devices'        #获取连接设备
+# pi= subprocess.run("adb devices",shell=True)
