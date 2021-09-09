@@ -1,4 +1,5 @@
 import requests
+import subprocess
 
 def packagename():
         dict = {
@@ -28,8 +29,31 @@ def packagename():
             "sdclean" : "com.sdandroid.server.ctscard",
             # 雷神
             "leishen" : "com.cleandroid.server.ctsthor",
+<<<<<<< HEAD
             # 随意连
             "suiyilian" : "com.connectandroid.server.ctseasy"
+=======
+            # wifi随意连
+            "suiyilian" : "com.connectandroid.server.ctseasy",
+            # wifi随心连
+            "suixinlian" : "com.heartandroid.server.ctslink",
+            # 天天快清理
+            "tiantian" : "com.cleandroid.server.ctspeed",
+            # 闪电快连
+            "shandian" : "com.lightningandroid.server.ctslink",
+            # 天气
+            "tianqi" : "com.weatherandroid.server.ctslink",
+            # 连连快
+            "lianliankuai" : "com.fastandroid.server.ctsnet",
+            # 畅快连
+            "changkuailian" : "com.smoothandroid.server.ctslink",
+            # 海豚wifi
+            "haitun" : "com.dolphinandroid.server.ctslink",
+            # 云鲲
+            "yunkun" : "com.cleandroid.server.ctsea",
+            # 如意
+            "ruyi" : "com.wishesandroid.server.ctslink"
+>>>>>>> b7e282c... 添加部分packagename；添加修改后清除数据
         }
 
         return dict
@@ -174,10 +198,16 @@ if __name__ == '__main__':
         guiyin(base_url=base_url,method="query",device_id=device_id,pkg_name=pkg_name)
 =======
     
+<<<<<<< HEAD
 
     device_id="2d0bb00bbe67383e"
 
     pkg_name=packagename()["suixinlian"]
+=======
+    device_id="438c3a41a866bbec"
+     
+    pkg_name=packagename()["yunkun"]
+>>>>>>> b7e282c... 添加部分packagename；添加修改后清除数据
     print(pkg_name)
 
     '''修改归因信息'''
@@ -196,7 +226,14 @@ if __name__ == '__main__':
     '''查看归因信息'''
     guiyin(base_url=base_url,method="query",device_id=device_id,pkg_name=pkg_name)
 
+<<<<<<< HEAD
 >>>>>>> 6212cfd... 修改参数错误
+=======
+    '''更改归因后清除数据'''
+    order='adb shell pm clear' + " " + pkg_name
+    pi= subprocess.run(order,shell=True)
+
+>>>>>>> b7e282c... 添加部分packagename；添加修改后清除数据
 '''
 https://tycs.suapp.mobi
 http://161.189.70.26:9001
