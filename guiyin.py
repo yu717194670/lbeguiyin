@@ -48,7 +48,9 @@ def packagename():
             # 云鲲
             "yunkun" : "com.cleandroid.server.ctsea",
             # 如意
-            "ruyi" : "com.wishesandroid.server.ctslink"
+            "ruyi" : "com.wishesandroid.server.ctslink",
+            # 畅联精灵
+            "cljl" : "com.geniusandroid.server.ctsattach"
         }
 
         return dict
@@ -87,20 +89,20 @@ if __name__ == '__main__':
     elif text=="z":
         base_url="http://161.189.70.26:9001"
         print("正式服地址")
-    
-    device_id="438c3a41a866bbec"
+
+    device_id="0a62fc9b98ab8738"
      
-    pkg_name=packagename()["yunkun"]
+    pkg_name=packagename()["cljl"]
     print(pkg_name)
 
     '''修改归因信息'''
     guiyin(
         base_url=base_url,
         pkg_name=pkg_name,
-        device_id=device_id,    
+        device_id=device_id,  
         media_source="bytedance_int",
         ad_site_ad="10001",
-        campaign_id="00"
+        campaign_id="0"
         )
 
     '''移除黑名单'''
